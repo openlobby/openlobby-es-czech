@@ -1,0 +1,2 @@
+# Elasticsearch with Czech analyzer
+

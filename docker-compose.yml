@@ -1,0 +1,24 @@
+version: "2"
+
+services:
+    openlobby-es:
+        image: openlobby/openlobby-es-czech:latest
+        environment:
+            - discovery.type=single-node
+            - cluster.name=openlobby
+            - bootstrap.memory_lock=true
+            - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+        ulimits:
+            memlock:
+                soft: -1
+                hard: -1
+        mem_limit: 1g
+        ports:
+            - "9200:9200"
+        restart: always
+        volumes:
+            - openlobby-es-data:/usr/share/elasticsearch/data
+
+volumes:
+    openlobby-es-data:
+        driver: local
