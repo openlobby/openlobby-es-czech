@@ -58,6 +58,7 @@ you can build it locally: `make build`
 ## Run for local development
 
 Run on port 9200: `make run`
+
 Stop: `make stop`
 
 Stop and/or remove all data: `make destroy`
