@@ -1,5 +1,7 @@
 # Elasticsearch with Czech analyzer
 
+Docker image: [openlobby/openlobby-es-czech](https://hub.docker.com/r/openlobby/openlobby-es-czech/)
+
 Batteries included:
  - ICU Analysis Plugin
  - Czech Hunspell dictionaries (from OpenOffice)
@@ -8,7 +10,7 @@ X-Pack plugin is removed.
 
 ## Usage
 
-Create your index with these settings:
+Create Index with these settings:
 
 ```
 {
@@ -50,11 +52,12 @@ You can use `'czech'` analyzer on text fields now.
 
 ## Build
 
-Build docker container: `make build`
+If you don't want to use pre-built container from [openlobby/openlobby-es-czech](https://hub.docker.com/r/openlobby/openlobby-es-czech/)
+you can build it locally: `make build`
 
 ## Run for local development
 
-Run Elasticsearch on port 9200: `make run`
-Stop Elasticsearch container: `make stop`
+Run on port 9200: `make run`
+Stop: `make stop`
 
-Stop and/or remove volume with data: `make destroy`
+Stop and/or remove all data: `make destroy`
