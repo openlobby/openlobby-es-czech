@@ -1,0 +1,8 @@
+# Czech Synonyms in Solr format
+# =============================
+#
+# Write comma separated list of words without diacritic in lowercase.
+# One set of synonyms per line.
+
+kava, kafe
+tramvaj, salina

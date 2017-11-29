@@ -30,7 +30,11 @@ Create Index with these settings:
                     'type': 'hunspell',
                     'locale': 'cs_CZ',
                     'dedup': True,
-                }
+                },
+                'czech_synonym': {
+                    'type': 'synonym',
+                    'synonyms_path': 'analysis/cs_CZ/synonym.txt',
+                },
             },
             'analyzer': {
                 'czech': {
@@ -38,6 +42,7 @@ Create Index with these settings:
                     'filter': [
                         'icu_folding',
                         'lowercase',
+                        'czech_synonym',
                         'czech_stop',
                         'czech_stemmer',
                         'cs_CZ',
@@ -50,6 +55,9 @@ Create Index with these settings:
 ```
 
 You can use `'czech'` analyzer on text fields now.
+
+There is custom dictionary of synonyms included. You can adjust it for your
+needs or remove it from analyzer settings.
 
 ## Build
 
