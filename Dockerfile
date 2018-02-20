@@ -1,4 +1,4 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.6.4
+FROM docker.elastic.co/elasticsearch/elasticsearch:5.6.7
 
 RUN elasticsearch-plugin remove --purge x-pack
 RUN elasticsearch-plugin install analysis-icu
