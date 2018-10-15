@@ -1,6 +1,5 @@
-FROM docker.elastic.co/elasticsearch/elasticsearch:5.6.7
+FROM docker.elastic.co/elasticsearch/elasticsearch-oss:6.1.4
 
-RUN elasticsearch-plugin remove --purge x-pack
 RUN elasticsearch-plugin install analysis-icu
 
 ADD hunspell/ /usr/share/elasticsearch/config/hunspell/
